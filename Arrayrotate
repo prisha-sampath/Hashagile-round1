@@ -1,0 +1,25 @@
+function rightRotate(arr, k) {
+const n = arr.length;
+k = k % n;
+for (let i = 0; i < n; i++) {
+if (i < k) {
+process.stdout.write(arr[n + i - k] + " ");
+} else {
+process.stdout.write(arr[i - k] + " ");
+}
+}
+process.stdout.write("\n");
+}
+const Array1 = [1, 2, 3, 4, 5];
+const K = 2;
+
+const Array2 = [10, 20, 30, 40, 50];
+const L = 3;
+const Array3 = [7, 8, 9, 10, 11, 12];
+const M = 4;
+process.stdout.write("Rotated Array 1: ");
+rightRotate(Array1, K);
+process.stdout.write("Rotated Array 2: ");
+rightRotate(Array2, L);
+process.stdout.write("Rotated Array 3: ");
+rightRotate(Array3, M);
